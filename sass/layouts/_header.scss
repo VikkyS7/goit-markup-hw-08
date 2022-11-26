@@ -1,0 +1,92 @@
+.header{
+    padding: 16px 0;
+    @media screen and (min-width:768px) {
+            padding: 0;
+        }
+}
+
+.header__container {
+    @extend %list;
+    justify-content: space-between;
+    @media screen and (min-width:768px) {
+            justify-content: flex-start;
+        }
+
+}
+
+.toggle-burger{
+    width: 40px;
+    :focus-within{
+        border: 1px solid red;
+    }
+    @media screen and (min-width:768px) {
+            display: none;
+        }
+}
+.navigation {
+    @extend %list;
+    
+}
+
+.connect {
+    display: none;
+    .phone-icon{
+        fill: var(--secondary-text-color);
+    }
+    @media screen and (min-width:768px) {
+            display: flex;
+            flex-direction: column;
+                gap: 10px;
+                margin-left: auto;
+                align-items: flex-start;
+        }
+                @media screen and (min-width:1200px) {
+                    gap: 50px;
+                    flex-direction: row;
+                    align-items: center;
+                }
+}
+.menu__links {
+    @include font(14px, 1.14, 500, 0.02em);
+
+    display: block;
+    padding: 32px 0;
+    color: var(--primary-text-color);
+    position: relative;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        color: var(--accent-color);
+
+    }
+}
+
+.navigation__logo{
+    margin-right: 93px;
+}
+
+.menu {
+    display: none;
+    @media screen and (min-width:768px) {
+        display: flex;
+        gap: 50px;    
+    }
+}
+ul {
+    list-style: none;
+}
+.current {
+    color: var(--accent-color);
+}
+.current::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    display: block;
+    height: 4px;
+    bottom: 0px;
+    left: 0px;
+    background: var(--accent-color);
+    border-radius: 2px;
+}

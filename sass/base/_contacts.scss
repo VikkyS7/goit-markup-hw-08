@@ -1,0 +1,62 @@
+.connect__mail__wrap {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.connect__phone__wrap {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.connect__envelop__icon {
+    fill: currentColor;
+}
+
+.connect__phone__icon {
+    fill: currentColor;
+}
+
+.connect__mail {
+    @include font(14px, 1.71, 500, 0.03em);
+
+    color: var(--secondary-text-color);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        color: var(--accent-color);
+    }
+}
+
+.connect__address {
+    @include font(14px, 1.71, 400, 0.03em);
+
+    color: var(--primary-white);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    margin-bottom: 9px;
+
+    &:hover,
+    &:focus {
+        color: var(--accent-color);
+    }
+}
+
+
+.connect__phone {
+    font-style: normal;
+    @include font(14px, 1.14, 500, 0.02em);
+
+    color: var(--secondary-text-color);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        color: var(--accent-color);
+    }
+}

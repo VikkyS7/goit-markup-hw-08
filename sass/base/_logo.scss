@@ -1,0 +1,21 @@
+.logo {
+    font-family: 'Raleway';
+    @include font(26px, 1.19, 700, 0.03em);
+
+    &:hover {
+        color: var(--accent-color);
+    }
+}
+
+
+.webstudio {
+    color: var(--black);
+}
+
+.web {
+    color: var(--accent-color);
+}
+
+.webstudio-footer {
+    color: var(--primary-white);
+}
