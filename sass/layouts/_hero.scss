@@ -1,34 +1,64 @@
 .hero {
-    background-color: var(--hero-color);
-    max-width: 1600px;
-    width: 100%;
-    margin: 0 auto;
-    height: 600px;
-    align-items: center;
-    padding: 200px 0;
-    text-align: center;
+  background-color: var(--hero-color);
+  max-width: 1600px;
+  width: 100%;
+  margin: 0 auto;
+  height: 600px;
+  align-items: center;
+  padding: 200px 0;
+  text-align: center;
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../img/hero-mobile.jpg);
+
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-        url(../img/hero-bg.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+      url(../img/hero-mobilex2.jpg);
+  }
+
+  @media screen and (min-width: 768px) {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../img/hero-tablet.jpg);
+      @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../img/hero-tabletx2.jpg);
+  }
+  }
+
+  
+
+  @media screen and (min-width: 1200px) {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../img/hero-bg.jpg);
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../img/hero-desktopx2.jpg);
+    }
+  }
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .hero__title {
-    @include font(26px, 1.36, 900, 0.06em);
-    // font-weight: 900;
-    // font-size: 44px;
-    // line-height: 1.36;
-    // letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: var(--primary-white);
-    text-align: center;
-    margin-right: auto;
-    margin-left: auto;
-    // width: 696px;
-    margin-bottom: 30px;
-    @media screeen and (min-width: 1200px){
-        font-size: 44px;
-    }
+  @include font(26px, 1.36, 900, 0.06em);
+  // font-weight: 900;
+  // font-size: 44px;
+  // line-height: 1.36;
+  // letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--primary-white);
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  // width: 696px;
+  margin-bottom: 30px;
 
+  // @media screeen and (min-width: 480px){
+  //    display: none;
+  // }
+
+  @media screeen and (min-width: 1200px) {
+    font-size: 44px;
+  }
 }

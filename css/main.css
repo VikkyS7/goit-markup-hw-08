@@ -335,6 +335,61 @@ html {
 .header {
   padding: 16px 0;
 }
+.header .backdrop {
+  background-color: white;
+}
+.header .backdrop .burger-top-nav {
+  margin-left: 40px;
+  font-size: 40px;
+  font-weight: 500;
+  letter-spacing: 2%;
+  margin-top: 48px;
+}
+.header .backdrop .burger-top-nav p:not(:first-child) {
+  margin-top: 32px;
+}
+.header .backdrop .burger-top-nav p:hover, .header .backdrop .burger-top-nav p:focus {
+  color: var(--accent-color);
+  cursor: pointer;
+}
+.header .backdrop .close-mobile-menu {
+  position: absolute;
+  right: 25px;
+  top: 21px;
+  width: 18px;
+}
+.header .backdrop footer {
+  margin-top: 306px;
+}
+.header .backdrop footer p {
+  font-weight: 500;
+  margin-left: 40px;
+}
+.header .backdrop footer p:first-of-type {
+  color: var(--accent-color);
+  font-size: 34px;
+}
+.header .backdrop footer p:last-of-type {
+  margin-top: 32px;
+  font-size: 24px;
+  color: var(--secondary-text-color);
+  margin-bottom: 64px;
+}
+.header .backdrop footer .mob__list-soc {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.header .backdrop footer .mob__list-soc li a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+.header .backdrop footer .mob__list-soc li:not(:last-of-type):after {
+  content: "|";
+  position: absolute;
+  color: rgba(33, 33, 33, 0.2);
+  transform: translateX(10px);
+}
 @media screen and (min-width: 768px) {
   .header {
     padding: 0;
@@ -350,14 +405,11 @@ html {
   }
 }
 
-.toggle-burger {
+.burger-button {
   width: 40px;
 }
-.toggle-burger :focus-within {
-  border: 1px solid red;
-}
 @media screen and (min-width: 768px) {
-  .toggle-burger {
+  .burger-button {
     display: none;
   }
 }
@@ -434,6 +486,41 @@ ul {
   border-radius: 2px;
 }
 
+.mob__menu-list {
+  margin-bottom: 64px;
+}
+
+.mob__link-soc {
+  font-size: 18px;
+  line-height: 1.14;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+.mob__link-soc::before {
+  content: "";
+  position: absolute;
+  background-color: rgba(33, 33, 33, 0.2);
+  width: 1px;
+  height: 22px;
+  bottom: 0px;
+  left: -5px;
+}
+
+.mob__list-soc {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  gap: 20px;
+}
+
+.mob__menu-soc {
+  display: flex;
+  gap: 20px;
+}
+
 .hero {
   background-color: var(--hero-color);
   max-width: 1600px;
@@ -443,10 +530,35 @@ ul {
   align-items: center;
   padding: 200px 0;
   text-align: center;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/hero-bg.jpg);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/hero-mobile.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/hero-mobilex2.jpg);
+  }
+}
+@media screen and (min-width: 768px) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/hero-tablet.jpg);
+  }
+}
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/hero-tabletx2.jpg);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/hero-bg.jpg);
+  }
+}
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/hero-desktopx2.jpg);
+  }
 }
 
 .hero__title {
