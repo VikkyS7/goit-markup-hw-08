@@ -56,8 +56,11 @@
         </ul>
     <!-- <button type="button" class="burger-button" data-modal-open></button> -->
 
-     <img src="./img/menu.svg" data-burger class="burger-button" width="40px" alt="burger-menu">
-      </div>
+     <button type="button"  data-burger class="burger-button"  alt="burger-menu">
+      <svg class="modal-close-icon" width="24" height="24">
+            <use href="./img/icons-all.svg#icon-menu_24px.svg"></use>
+          </svg>
+    </div>
            <!-- -BLOCK-MODAL--CONTACTS--->
      <div class="contact-block-menu backdrop is-hidden" data-burger-menu>
       <img class="close-mobile-menu" data-burger-close src="./img/close_24px.svg" alt="close button">
@@ -66,25 +69,25 @@
       <p class="title__contact">Портфоліо</p>
       <p class="title__contact">Контакти</p>
       </nav>
-      <footer>
-        <p class="title__contact">+38 096 111 11 11</p>
-        <p class="title__contact">info@devstudio.com</p>
+      <div>
+        <p class="title__tel">+38 096 111 11 11</p>
+        <p class="title__email">info@devstudio.com</p>
 
         <ul class="mob__list-soc">
-        <li class="mob__link-soc">
+        <li class="mob__link_modal">
         <a href="" class="" link>Instagram</a>
         </li>
-        <li class="mob__link-soc link">
+        <li class="mob__link_modal link">
         <a href="" class="" link>Twitter</a>
         </li>     
-          <li class="mob__link-soc">
+          <li class="mob__link_modal">
         <a href="" class="" link>Facebook</a>
         </li> 
-        <li class="mob__link-soc">
+        <li class="mob__link_modal">
         <a href="" class="" link>Linkedin</a>
         </li>          
           </ul> 
-      </footer>
+        </div>
       
      </div>
     </header>
@@ -184,7 +187,7 @@
           <ul class="ourteam-items">
             <li class="team-member">
             
-            <!-- <picture>
+            <picture>
                 <source
                   srcset="
                     ./img/img4.jpeg    1x,
@@ -205,7 +208,7 @@
                     ./img/ourteam-mob1x2.jpeg 2x
                   "
                   media="(min-width: 450px)"
-                /> -->
+                /> 
               
               <img src="./img/img4.jpg" alt="Усміхнений молодий чоловік в окулярах" width="270" />
          <!-- </picture> -->

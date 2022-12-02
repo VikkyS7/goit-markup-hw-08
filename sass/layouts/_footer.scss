@@ -5,26 +5,28 @@
     text-align: center;
   }
   .container {
-    display: flex;
-    flex-direction: column;
+    // display: flex;
+    // flex-direction: column;
     align-items: center;
   }
+}
   .newsletter {
-    flex-direction: column;
+    // flex-direction: column;
     margin: 0;
     align-items: center;
     text-align: center;
     gap: 20px;
     margin-top: 60px;
     input {
-      width: 450px;
+      width: 100%;
+      max-width: 450px;
       margin-right: 0px;
-    }
-  }
+    } 
+  
   &.contacts-footer {
     color: var(--contacts-color);
   }
-
+  }
   @media screen and (min-width: 768px) {
     .container {
       flex-direction: row;
@@ -70,7 +72,7 @@
       }
     }
   }
-}
+
 
 .footer-wrap {
   display: flex;
