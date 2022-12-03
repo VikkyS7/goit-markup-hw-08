@@ -30,6 +30,8 @@
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
       url(../img/hero-bg.jpg);
       padding: 200px 0;
+  height: 600px;
+
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
       background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
         url(../img/hero-desktopx2.jpg);
@@ -47,6 +49,7 @@
   // font-size: 44px;
   // line-height: 1.36;
   // letter-spacing: 0.06em;
+  max-width: 360px;
   text-transform: uppercase;
   color: var(--primary-white);
   text-align: center;
@@ -59,7 +62,8 @@
   //    display: none;
   // }
 
-  @media screeen and (min-width: 1200px) {
+  @media screen and (min-width: 1200px) {
     font-size: 44px;
+    max-width: 696px;
   }
 }
