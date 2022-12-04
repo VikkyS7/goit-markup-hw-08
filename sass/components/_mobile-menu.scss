@@ -37,11 +37,6 @@
   text-decoration: none;
 }
 
-.menu .link:hover,
-.menu .link:focus {
-  text-decoration: underline;
-}
-
 .menu-toggle {
   min-height: 40px;
   min-width: 40px;
@@ -79,7 +74,7 @@
   background-color: var(--primary-white);
   z-index: 999;
 
-  transform: translateX(100%);
+  transform: translateX(150%);
   transition: transform 250ms ease-in-out;
   
 }
@@ -105,6 +100,9 @@
   color: rgb(0, 0, 0);
   text-decoration: none;
 }
+.mobile-menu  .current{
+    color: var(--accent-color);
+  }
 
 .wrapper-mobile-menu {
   display: flex;
@@ -148,6 +146,7 @@
       >ul{
 
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
         gap: 20px;
         li{

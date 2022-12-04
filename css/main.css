@@ -150,6 +150,9 @@ html {
 .connect__phone:hover, .connect__phone:focus {
   color: var(--accent-color);
 }
+.connect__phone:hover svg, .connect__phone:focus svg {
+  fill: var(--accent-color);
+}
 
 .logo {
   font-family: "Raleway";
@@ -356,11 +359,6 @@ html {
   text-decoration: none;
 }
 
-.menu .link:hover,
-.menu .link:focus {
-  text-decoration: underline;
-}
-
 .menu-toggle {
   min-height: 40px;
   min-width: 40px;
@@ -395,7 +393,7 @@ html {
   padding: 48px 40px 40px 40px;
   background-color: var(--primary-white);
   z-index: 999;
-  transform: translateX(100%);
+  transform: translateX(150%);
   transition: transform 250ms ease-in-out;
 }
 
@@ -420,6 +418,10 @@ html {
   display: block;
   color: rgb(0, 0, 0);
   text-decoration: none;
+}
+
+.mobile-menu .current {
+  color: var(--accent-color);
 }
 
 .wrapper-mobile-menu {
@@ -462,6 +464,7 @@ html {
 }
 .wrapper-mobile-menu .bottom > ul {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
 }
@@ -797,7 +800,7 @@ ul {
 }
 
 .whatwedo__section {
-  padding: 94px 0;
+  padding-bottom: 94px;
   display: none;
 }
 @media screen and (min-width: 1200px) {
@@ -1033,6 +1036,21 @@ ul {
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scaleY(0);
 }
+@media screen and (max-width: 1199px) {
+  .modal {
+    width: 95%;
+    max-width: 450px;
+    height: 95%;
+    max-height: 609px;
+    overflow: scroll;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    height: 581px;
+  }
+}
 
 .modal-title {
   font-size: 20px;
@@ -1131,6 +1149,12 @@ ul {
   height: 16px;
   border: 2px solid var(--primary-text-color);
   border-radius: 3px;
+}
+@media screen and (max-width: 1199px) {
+  .check-text:before {
+    width: 17px;
+    height: 14px;
+  }
 }
 
 .input-check {
@@ -1231,6 +1255,7 @@ ul {
 
 .footer {
   background-color: #2f303a;
+  padding: 60px 0;
 }
 .footer .footer-wrap-address {
   text-align: center;
@@ -1274,13 +1299,6 @@ ul {
     text-align: left;
     margin-left: 93px;
   }
-  .footer .newsletter .newsletter-modal {
-    width: 353px;
-  }
-  .footer .newsletter input {
-    width: 353px;
-    margin-right: 10px;
-  }
 }
 
 .newsletter {
@@ -1291,8 +1309,19 @@ ul {
   margin-top: 60px;
 }
 .newsletter input {
-  width: 450px;
-  margin-right: 0px;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .newsletter input {
+    width: 450px;
+    margin-right: 0px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .newsletter input {
+    width: 450px;
+    margin-right: 0px;
+  }
 }
 .newsletter.contacts-footer {
   color: var(--contacts-color);
